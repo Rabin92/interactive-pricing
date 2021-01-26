@@ -1,0 +1,191 @@
+// ==========================================================================
+// Card
+// ==========================================================================
+
+.card-container {
+  @include flexy($j-content: center);
+  padding: $gutters;
+  position: relative;
+  top: -100px;
+}
+
+.card {
+  text-align: $text--center;
+  width: 100%;
+  max-width: 400px;
+  padding: 2em;
+  background: $white;
+  box-shadow: 0 10px 40px -20px rgba(46, 78, 150, 0.4);
+  border-radius: $br--radius;
+
+  @media #{$break--s} {
+    max-width: 500px;
+  }
+
+  @include e(stats) {
+    @media #{$break--s} {
+      @include flexy($j-content: space-between);
+    }
+  }
+
+  @include e(views) {
+    text-transform: uppercase;
+    margin-bottom: em(60px);
+    letter-spacing: 0.075em;
+    font-size: em(12px);
+
+    @media #{$break--s} {
+      margin-bottom: 0;
+      font-weight: $font-weight--bold;
+    }
+  }
+
+  @include e(price) {
+    @include flexy($j-content: center);
+    margin-top: 5em;
+
+    @media #{$break--s} {
+      margin-top: initial;
+    }
+  }
+
+  @include e(price-numb) {
+    font-size: em(26px);
+    font-weight: $font-weight--bold;
+    color: $rhino;
+
+    @media #{$break--s} {
+      font-size: em(35px);
+    }
+  }
+
+  @include e(span) {
+    font-size: em(14px);
+    font-weight: $font-weight--medium;
+    margin-left: em(10px);
+    color: $textCol;
+
+    @media #{$break--s} {
+      font-weight: $font-weight--bold;
+    }
+  }
+
+  @include e(slider) {
+    position: relative;
+    top: -95px;
+
+    @media #{$break--s} {
+      top: 15px;
+    }
+  }
+
+  @include e(slider-range) {
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    height: 8px;
+    border-radius: 50%;
+    width: 100%;
+    background: $sliderBar;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  @include e(toggle) {
+    @include flexy($j-content: center);
+    font-size: em(12px);
+    border-bottom: 1px solid $linkWater;
+    padding: em(15px) em(0px) em(35px);
+
+    @media #{$break--s} {
+      margin-top: em(60px);
+      font-weight: $font-weight--bold;
+    }
+  }
+
+  @include e(toggle-btn) {
+    margin: em(0px) em(10px);
+
+    @media #{$break--s} {
+      margin: em(0px) em(20px);
+    }
+  }
+
+  @include e(yearly) {
+    margin-right: em(5px);
+  }
+
+  @include e(discount) {
+    font-size: em(11px);
+    border-radius: 20px;
+    padding: em(2px) em(10px);
+    background: $discountBg;
+    color: $discountText;
+
+    @media #{$break--s} {
+      &::after {
+        content: 'discount';
+        padding-left: em(5px);
+      }
+    }
+  }
+
+  @include e(service) {
+    margin-top: em(20px);
+    padding: em(15px) em(0px);
+
+    @media #{$break--s} {
+      display: grid;
+      grid-gap: em(10px);
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include e(list) {
+    padding-bottom: em(10px);
+
+    @media #{$break--s} {
+      text-align: left;
+    }
+
+    &::before {
+      content: url(' ../images/icon-check.svg ');
+      margin-right: em(15px);
+    }
+  }
+
+  @include e(btn) {
+    @include flexy($j-content: center);
+  }
+
+  @include e(btn-trial) {
+    color: $cta;
+    font-size: em(12px);
+    background: $bgCol;
+    border-radius: 20px;
+    padding: 0.85em;
+    width: 50%;
+    margin-top: em(20px);
+
+    &:hover {
+      background: lighten($bgCol, 5%);
+    }
+
+    @media #{$break--s} {
+      width: 80%;
+      font-weight: $font-weight--bold;
+    }
+  }
+}
+
+.card__slider-range::-webkit-slider-thumb {
+  @include sliderThumb();
+  background: $slider url('../images/icon-slider.svg') no-repeat center;
+  box-shadow: $iceCold 0px 14px 28px, $iceCold 0px 10px 10px;
+}
+
+.card__slider-range::-moz-range-thumb {
+  @include sliderThumb();
+  background: $slider url('../images/icon-slider.svg') no-repeat center;
+  box-shadow: $iceCold 0px 14px 28px, $iceCold 0px 10px 10px;
+}

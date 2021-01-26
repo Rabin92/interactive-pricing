@@ -1,0 +1,38 @@
+// ==========================================================================
+// Section
+// ==========================================================================
+
+.section {
+  @include flexy($j-content: center, $f-dir: column);
+  height: 220px;
+  padding: $gutters;
+  position: relative;
+
+  @include e(circle) {
+    position: absolute;
+    bottom: 30px;
+  }
+
+  @include e(intro) {
+    position: relative;
+    text-align: $text--center;
+  }
+
+  @include e(title) {
+    font-size: em(20px);
+
+    @media #{$break--s} {
+      font-size: em(28px);
+    }
+  }
+
+  @include e(subtitle) {
+    font-weight: $font-weight--light;
+    margin-bottom: em(5px);
+
+    @media #{$break--s} {
+      display: inline-block;
+      font-weight: $font-weight--medium;
+    }
+  }
+}

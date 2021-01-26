@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Interactive pricing component</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <section class="section">
+          <div class="section__circle">
+            <img src="images/pattern-circles.svg" alt="" />
+          </div>
+
+          <div class="section__intro">
+            <h1 class="section__title">Simple, traffic-based pricing</h1>
+            <p class="section__subtitle">Sign-up for our 30-day trial.</p>
+            <p class="section__subtitle">No credit card required.</p>
+          </div>
+        </section>
+      </header>
+
+      <main class="card-container">
+        <section class="card" id="js-card">
+          <div class="card__stats">
+            <p class="card__views" id="js-views">
+              <!-- Get data through JS -->
+            </p>
+
+            <div class="card__price">
+              <span class="card__price-numb">£</span>
+              <p class="card__price-numb" id="js-price">
+                <!-- Get data through JS -->
+              </p>
+              <span class="card__span">/ month</span>
+            </div>
+          </div>
+
+          <div class="card__slider">
+            <input
+              type="range"
+              min="10000"
+              max="180000"
+              step="10000"
+              class="card__slider-range"
+              id="js-slider"
+            />
+          </div>
+
+          <div class="card__toggle">
+            <p class="card__monthly">Monthly Billing</p>
+            <div class="card__toggle-btn">
+              <label class="switch-light switch-material">
+                <input id="js-toggle" type="checkbox" />
+                <span class="toggle__switch" aria-hidden="true">
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
+                </span>
+              </label>
+            </div>
+            <p class="card__yearly">Yearly Billing</p>
+            <p class="card__discount">-25%</p>
+          </div>
+
+          <div class="card__service">
+            <div class="card__items">
+              <p class="card__list">Unlimited websites</p>
+              <p class="card__list">100% data ownership</p>
+              <p class="card__list">Email reports</p>
+            </div>
+
+            <div class="card__btn">
+              <button class="card__btn-trial">Start my trial</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <small>
+          Challenge by
+          <a
+            class="footer__link"
+            href="https://www.frontendmentor.io/profile/Rabin92"
+            target="_blank"
+            rel="noopener"
+            >Frontend Mentor</a
+          >. Coded by
+
+          <a
+            class="footer__link"
+            href="https://www.rabingm.dev"
+            target="_blank"
+            rel="noopener"
+            >Rabin Gharti Magar</a
+          >.
+        </small>
+      </footer>
+    </div>
+    <!-- /container -->
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+    <!-- /JS -->
+  </body>
+</html>

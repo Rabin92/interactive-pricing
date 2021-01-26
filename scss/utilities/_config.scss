@@ -1,0 +1,57 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Stacks
+
+$font-url--primary: 'https://fonts.googleapis.com/css2?family=Manrope:wght@300;600;800&display=swap';
+$font-family--primary: 'Manrope', sans-serif;
+
+// Font Weights
+$font-weight--light: 300;
+$font-weight--medium: 600;
+$font-weight--bold: 800;
+
+// Descriptive Base Colors
+$white: #fff;
+$iceCold: #a5f3eb;
+$brightTurquoise: #10d5c2;
+$bridesmaid: #feece7;
+$salmon: #ff8c66;
+$periwinkle: #bdccff;
+$zircon: #fafbff;
+$linkWater: #eaeefb;
+$periwinkleGray: #cdd7ee;
+$baliHai: #858fad;
+$rhino: #293356;
+
+// Color Usage
+$sliderBar: $iceCold;
+$slider: $brightTurquoise;
+$discountBg: $bridesmaid;
+$discountText: $salmon;
+$cta: $periwinkle;
+$mainBg: $zircon;
+$sliderBg: $linkWater;
+$toggleBg: $periwinkleGray;
+$textCol: $baliHai;
+$bgCol: $rhino;
+
+// Text
+$base__font-size: 15px;
+$base__line: 24px;
+$text--center: center;
+
+// Border radius
+$br--radius: 10px;
+
+// Path to Assets
+$path--rel: '../images';
+
+// Gutters
+$gutters: 1em;
+
+// Media queries
+$break--s: '(min-width: 600px)';
+$break--m: '(min-width: 768px)';
+$break--l: '(min-width: 1024px)';

@@ -1,0 +1,29 @@
+// ==========================================================================
+// Toggle
+// ==========================================================================
+
+.switch-material.switch-light > span {
+  background: $toggleBg;
+  width: 35px;
+  height: 18px;
+  top: -1px;
+  cursor: pointer;
+}
+
+.switch-material.switch-light input:checked ~ span {
+  background: $brightTurquoise;
+}
+
+.switch-material.switch-light input:checked ~ span a {
+  background: $white;
+}
+
+.switch-light.switch-material a {
+  width: 20px;
+  height: 20px;
+}
+.switch-light.switch-material > span:before,
+.switch-light.switch-material > span:after,
+.switch-toggle.switch-material label:after {
+  background: none;
+}
